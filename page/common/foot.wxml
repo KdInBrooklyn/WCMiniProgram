@@ -1,0 +1,9 @@
+<!--底部视图模板-->
+
+<template name="foot">
+  <navigator class="page-foot" openType="switchTab" url="/page/component/index" hover-class="none">
+  <!--底部视图显示的只是一张图片, 从中可以看到小程序中显示本地图片的实现-->
+  <!--未搞懂多添加的路径的意思-->
+    <image class="icon-foot" src="../../../../image/icon_foot.png"></image>
+  </navigator>
+</template>

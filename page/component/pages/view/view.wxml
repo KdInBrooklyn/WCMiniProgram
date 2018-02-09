@@ -1,0 +1,47 @@
+<!--通过相对路径的方式导入自定义组件-->
+<import src="../../../common/head.wxml" />
+<import src="../../../common/foot.wxml" />
+
+<!--视图容器, 类似于iOS中的视图控制器的根视图-->
+<view class="container">
+<!--使用自定义组件-->
+  <template is="head" data="{{title: 'view'}}"/>
+
+  <!--和头部视图平级的容器视图,-->
+  <view class="page-body">
+
+  <!--第一个分区视图的容器视图-->
+    <view class="page-section">
+      <!--单独显示文本的视图-->
+      <view class="page-section-title">
+        <text>flex-direction: row\n横向布局</text>
+      </view>
+
+      <!--视图-->
+      <view class="page-section-spacing">
+        <view class="flex-wrp" style="flex-direction:row;">
+          <!--在给class命名时,可以添加前缀, 在同一类视图布局时可以根据前缀给该类视图进行布局-->
+          <view class="flex-item demo-text-1"></view>
+          <view class="flex-item demo-text-2"></view>
+          <view class="flex-item demo-text-3"></view>
+        </view>
+      </view>
+
+    </view>
+
+    <!--第二个分区视图的容器视图-->
+    <view class="page-section">
+      <view class="page-section-title">
+        <text>flex-direction: column\n纵向布局</text>
+      </view>
+      <view class="flex-wrp" style="flex-direction:column;">
+        <view class="flex-item flex-item-V demo-text-1"></view>
+        <view class="flex-item flex-item-V demo-text-2"></view>
+        <view class="flex-item flex-item-V demo-text-3"></view>
+      </view>
+    </view>
+
+  </view>
+
+  <template is="foot" />
+</view>

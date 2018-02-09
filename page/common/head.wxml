@@ -1,0 +1,14 @@
+<!--头部视图模板-->
+
+<!--模板名称-->
+<template name="head">
+<!--容器视图, 通过定义视图的class名称, 方便在css文件中进行布局和样式设定-->
+  <view class="page-head">
+  <!--文本名称-->
+    <view class="page-head-title">{{title}}</view>
+    <!--底部下划线-->
+    <view class="page-head-line"></view>
+    <!--暂时未看到该视图的作用-->
+    <view wx:if="{{desc}}" class="page-head-desc">{{desc}}</view>
+  </view>
+</template>

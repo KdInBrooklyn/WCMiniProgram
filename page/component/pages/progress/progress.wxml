@@ -1,0 +1,32 @@
+<import src="../../../common/head.wxml" />
+<import src="../../../common/foot.wxml" />
+
+<view class="container">
+  <template is="head" data="{{title: 'progress'}}"/>
+
+  <view class="page-body">
+    <view class="page-section page-section-gap">
+
+      <view class="progress-box">
+        <progress percent="20" show-info stroke-width="3"/>
+      </view>
+
+      <view class="progress-box">
+        <progress percent="{{progressValue}}" active stroke-width="3" />
+        <icon class="progress-cancel" type="cancel" bindtap='progressTap'></icon>
+      </view>
+
+      <view class="progress-box">
+        <progress percent="60" active stroke-width="3" />
+      </view>
+
+      <view class="progress-box">
+        <!--color设置的是进度条的颜色,默认的是绿色-->
+        <progress percent="80" color="#10AEFF" active stroke-width="3" />
+      </view>
+
+    </view>
+  </view>
+
+  <template is="foot" />
+</view>
